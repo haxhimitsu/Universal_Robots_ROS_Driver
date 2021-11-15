@@ -6,11 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /WrenchStamped1
         - /TF1/Frames1
-        - /Pose1
-        - /PoseArray1
-        - /WrenchStamped2
       Splitter Ratio: 0.5
     Tree Height: 1117
   - Class: rviz/Selection
@@ -31,7 +27,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud2
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -143,18 +139,18 @@ Visualization Manager:
     - Alpha: 1
       Arrow Width: 0.20000000298023224
       Class: rviz/WrenchStamped
-      Enabled: false
-      Force Arrow Scale: 0.5
+      Enabled: true
+      Force Arrow Scale: 0.009999999776482582
       Force Color: 204; 51; 51
       Hide Small Values: true
       History Length: 1
       Name: WrenchStamped
       Queue Size: 10
       Topic: /wrench
-      Torque Arrow Scale: 0.5
+      Torque Arrow Scale: 0.009999999776482582
       Torque Color: 204; 204; 51
       Unreliable: false
-      Value: false
+      Value: true
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
@@ -177,9 +173,9 @@ Visualization Manager:
         model_origin:
           Value: true
         model_out_link:
-          Value: true
+          Value: false
         mount_base_link:
-          Value: true
+          Value: false
         sand_origin_link:
           Value: true
         shoulder_link:
@@ -196,6 +192,14 @@ Visualization Manager:
           Value: false
         wrist_3_link:
           Value: true
+        ycam3d-10m_origin_link:
+          Value: true
+        ycam_cp_bound:
+          Value: true
+        ycam_cp_link:
+          Value: true
+        ycam_ur:
+          Value: false
       Marker Alpha: 1
       Marker Scale: 0.20000000298023224
       Name: TF
@@ -227,6 +231,12 @@ Visualization Manager:
             {}
           sand_origin_link:
             {}
+          ycam3d-10m_origin_link:
+            ycam_cp_link:
+              ycam_cp_bound:
+                {}
+              ycam_ur:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 0.5
@@ -310,6 +320,23 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        ycam3d-10m_origin_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ycam_cp_bound:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ycam_cp_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ycam_ur:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -508,6 +535,62 @@ Visualization Manager:
       Torque Color: 204; 204; 51
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 0; 255; 255
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 1
+      Size (m): 0.0010000000474974513
+      Style: Points
+      Topic: /ycm_points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic: /theoritical_points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -536,7 +619,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.6001341342926025
+      Distance: 1.5961594581604004
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -544,17 +627,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.2818220257759094
-        Y: 0.35426831245422363
-        Z: 0.46333494782447815
+        X: 0.5010964870452881
+        Y: 0.8474223017692566
+        Z: 0.4418250322341919
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.07039815932512283
+      Pitch: 0.16747665405273438
       Target Frame: <Fixed Frame>
-      Yaw: 2.9304044246673584
+      Yaw: 0.028195764869451523
     Saved: ~
 Window Geometry:
   Displays:

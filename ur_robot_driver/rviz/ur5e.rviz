@@ -96,6 +96,7 @@ Visualization Manager:
         State Display Time: 0.05 s
         Trail Step Size: 1
         Trajectory Topic: /move_group/display_planned_path
+        Use Sim Time: false
       Planning Metrics:
         Payload: 1
         Show Joint Torques: false
@@ -514,7 +515,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.9144673347473145
+      Distance: 1.673370122909546
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -522,17 +523,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.37598446011543274
-        Y: 0.31022974848747253
-        Z: 0.608903706073761
+        X: 0.3428812325000763
+        Y: 0.3810596168041229
+        Z: 0.3796183168888092
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.0753985270857811
+      Pitch: 0.18539851903915405
       Target Frame: <Fixed Frame>
-      Yaw: 3.3553991317749023
+      Yaw: 3.315398693084717
     Saved: ~
 Window Geometry:
   Displays:
